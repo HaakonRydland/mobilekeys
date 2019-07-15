@@ -32,5 +32,5 @@ cordova.addConstructor(MobileKeys.install);
 
 // Method calls to native code
 MobileKeys.prototype.coolMethod = function (arg0, success, error) {
-    this.pInvoke("coolMethod", data, callbackOk, callbackError);
+    this.pInvoke("coolMethod", arg0, success, error);
 };
