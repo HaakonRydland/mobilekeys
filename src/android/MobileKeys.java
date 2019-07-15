@@ -19,6 +19,10 @@ public class MobileKeys extends CordovaPlugin {
             this.coolMethod(message, callbackContext);
             return true;
         }
+        if (action.equals("externalClassMethod")) {
+            this.externalClassMethod(callbackContext);
+            return true;
+        }
         return false;
     }
 
@@ -28,5 +32,13 @@ public class MobileKeys extends CordovaPlugin {
         } else {
             callbackContext.error("Expected one non-empty string argument.");
         }
+    }
+
+    private void externalClassMethod(CallbackContext callbackContext) {
+        MobileKeysImplementation moki = new MobileKeysImplementation();
+        if (moki.GotContact()) {
+            callbackContext.success("That worked");
+        }
+        callbackContext.error("That did not go as planned");
     }
 }

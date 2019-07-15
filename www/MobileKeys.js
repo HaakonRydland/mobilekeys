@@ -34,3 +34,8 @@ cordova.addConstructor(MobileKeys.install);
 MobileKeys.prototype.coolMethod = function (arg0, success, error) {
     this.pInvoke("coolMethod", arg0, success, error);
 };
+
+// External class Java
+MobileKeys.prototype.externalClassMethod = function (arg0, success, error) {
+    this.pInvoke("externalClassMethod", arg0, success, error);
+};
