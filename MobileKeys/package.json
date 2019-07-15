@@ -1,0 +1,19 @@
+{
+  "name": "cordova.plugin.mobilekeys",
+  "version": "0.0.1",
+  "description": "Plugin for mobile keys",
+  "cordova": {
+    "id": "cordova.plugin.mobilekeys",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "HR",
+  "license": "ISC"
+}
