@@ -12,6 +12,7 @@
       </config-file>
       <config-file parent="/*" target="AndroidManifest.xml" />
       <source-file src="src/android/MobileKeys.java" target-dir="src/cordova/plugin/mobilekeys/MobileKeys" />
+      <source-file src="src/android/MobileKeysImplementation.java" target-dir="src/cordova/plugin/mobilekeys/MobileKeysImplementation" />
    </platform>
    <platform name="ios">
       <config-file parent="/*" target="config.xml">

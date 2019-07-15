@@ -35,8 +35,8 @@ public class MobileKeys extends CordovaPlugin {
     }
 
     private void externalClassMethod(CallbackContext callbackContext) {
-        MobileKeysImplementation moki = new MobileKeysImplementation();
-        if (moki.GotContact()) {
+        MobileKeysImplementation mobileKey = new MobileKeysImplementation();
+        if (mobileKey.GotContact()) {
             callbackContext.success("That worked");
         }
         callbackContext.error("That did not go as planned");
