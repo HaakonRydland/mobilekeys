@@ -6,6 +6,12 @@ import org.apache.cordova.CallbackContext;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import com.assaabloy.mobilekeys.api.ApiConfiguration;
+import com.assaabloy.mobilekeys.api.MobileKeys;
+import com.assaabloy.mobilekeys.api.MobileKeysApi;
+import com.assaabloy.mobilekeys.api.ReaderConnectionController;
+import com.assaabloy.mobilekeys.api.ble.*;
+import com.assaabloy.mobilekeys.api.hce.NfcConfiguration;
 
 /**
  * This class echoes a string called from JavaScript.

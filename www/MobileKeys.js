@@ -14,7 +14,7 @@ MobileKeys.prototype.pInvoke = function(method, data, callback, callbackError) {
         data = [data];
     }
     exec(callback, function(err) {
-        callback(method + ' returned an error');
+        callback(method + ' returned an error in ' + this.PluginName);
     }, this.PluginName, method, data);
 }
 
