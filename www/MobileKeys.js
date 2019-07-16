@@ -13,7 +13,9 @@ MobileKeys.prototype.pInvoke = function(method, data, callbackOk, callbackError)
     } else if (!Array.isArray(data)) {
         data = [data];
     }
-    exec(callbackOk, callbackError, this.PluginName, method, data);
+    exec(callbackOk, function(err) {
+        callbackError(method + ' returned an error');
+    }, this.PluginName, method, data);
 }
 
 MobileKeys.install = function() {
