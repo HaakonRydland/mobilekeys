@@ -5,7 +5,7 @@ function MobileKeys() {}
 
 MobileKeys.prototype.PluginName = "MobileKeys";
 
-MobileKeys.prototype.pInvoke = function(method, data, callbackOk, callbackError) {
+MobileKeys.prototype.pInvoke = function(method, data, callback, callbackError) {
     console.log('Inside pInvoke');
 
     if (data == null || data == undefined) {
@@ -13,7 +13,7 @@ MobileKeys.prototype.pInvoke = function(method, data, callbackOk, callbackError)
     } else if (!Array.isArray(data)) {
         data = [data];
     }
-    exec(callbackOk, function(err) {
+    exec(callback, function(err) {
         callback(method + ' returned an error');
     }, this.PluginName, method, data);
 }
