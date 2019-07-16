@@ -12,7 +12,7 @@ public class MobileKeysImplementation {
         if (outputchanger) {
             callbackContext.success("Got contact with external method: " + outputchanger);
         } else {
-            callbackContext.error('Didn\t get contact with external method: ' + outputchanger);
+            callbackContext.error("Didn't get contact with external method: " + outputchanger);
         }
     }
 }
