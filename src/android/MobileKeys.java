@@ -22,9 +22,8 @@ public class MobileKeys extends CordovaPlugin {
             this.externalClassMethod(callbackContext);
             return true;
         } else if (action.equals("echoMethod)")) {
-            MobileKeysImplementation mobilekey = new MobileKeysImplementation();
             String message = args.getString(0);
-            mobilekey.echoMethod(message, callbackContext);
+            this.privateEchoMethod(message, callbackContext);
             return true;
         }
 
@@ -45,5 +44,10 @@ public class MobileKeys extends CordovaPlugin {
             callbackContext.success("That worked");
         }
         callbackContext.error("That did not go as planned");
+    }
+
+    private void privateEchoMethod(String message, CallbackContext callbackContext) {
+        MobileKeysImplementation mobileKey = new MobileKeysImplementation();
+        callbackContext = mobileKey.echoMethod(String message, CallbackContext callbackContext);
     }
 }
