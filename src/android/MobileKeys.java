@@ -47,7 +47,8 @@ public class MobileKeys extends CordovaPlugin {
     }
 
     private void privateEchoMethod(String message, CallbackContext callbackContext) {
-        MobileKeysImplementation mobileKey = new MobileKeysImplementation();
-        callbackContext = mobileKey.echoMethod(String message, CallbackContext callbackContext);
+        MobileKeysImplementation mobileKey2 = new MobileKeysImplementation();
+        CallbackContext cb = mobileKey2.echoMethod(String message, CallbackContext callbackContext);
+        callbackContext = cb;
     }
 }
