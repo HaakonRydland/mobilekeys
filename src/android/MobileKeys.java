@@ -18,11 +18,16 @@ public class MobileKeys extends CordovaPlugin {
             String message = args.getString(0);
             this.coolMethod(message, callbackContext);
             return true;
-        }
-        if (action.equals("externalClassMethod")) {
+        } else if (action.equals("externalClassMethod")) {
             this.externalClassMethod(callbackContext);
             return true;
+        } else if (action.equals("echoMethod)")) {
+            MobileKeysImplementation mobilekey = new MobileKeysImplementation();
+            String message = args.getString(0);
+            mobilekey.echoMethod(message, callbackContext);
+            return true;
         }
+
         return false;
     }
 
