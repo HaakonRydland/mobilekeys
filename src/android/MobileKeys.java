@@ -11,6 +11,7 @@ import org.json.JSONObject;
  * This class echoes a string called from JavaScript.
  */
 public class MobileKeys extends CordovaPlugin {
+    private MobileKeysImplementation mobileKey = new MobileKeysImplementation();
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -21,6 +22,9 @@ public class MobileKeys extends CordovaPlugin {
         } else if (action.equals("externalClassMethod")) {
             this.externalClassMethod(callbackContext);
             return true;
+        } else if (action.equals("echoMethod")) {
+            boolean outputChanger = Boolean.valueOf(args(0));
+            this.echoMethod(callbackContext, outputChanger);
         }
 
         return false;
@@ -35,10 +39,13 @@ public class MobileKeys extends CordovaPlugin {
     }
 
     private void externalClassMethod(CallbackContext callbackContext) {
-        MobileKeysImplementation mobileKey = new MobileKeysImplementation();
         if (mobileKey.GotContact()) {
             callbackContext.success("That worked");
         }
         callbackContext.error("That did not go as planned");
+    }
+
+    private void echoMethod(CallbackContext callbackContext, boolean outputchanger) {
+        mobileKey.echoMethod(callbackContext, outputchanger);
     }
 }

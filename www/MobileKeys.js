@@ -39,4 +39,7 @@ MobileKeys.prototype.coolMethod = function (arg0, success, error) {
 MobileKeys.prototype.externalClassMethod = function (arg0, success, error) {
     this.pInvoke("externalClassMethod", arg0, success, error);
 };
-    
+
+MobileKeys.prototype.echoMethod = function (arg0, success, error) {
+    this.pInvoke("echoMethod", arg0, success, error);
+};
