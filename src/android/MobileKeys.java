@@ -21,10 +21,6 @@ public class MobileKeys extends CordovaPlugin {
         } else if (action.equals("externalClassMethod")) {
             this.externalClassMethod(callbackContext);
             return true;
-        } else if (action.equals("echoMethod)")) {
-            String message = args.getString(0);
-            this.privateEchoMethod(message, callbackContext);
-            return true;
         }
 
         return false;
