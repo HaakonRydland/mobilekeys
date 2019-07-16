@@ -23,7 +23,8 @@ public class MobileKeys extends CordovaPlugin {
             this.externalClassMethod(callbackContext);
             return true;
         } else if (action.equals("echoMethod")) {
-            boolean outputChanger = Boolean.valueOf(args(0));
+            String arguments = args.getString(0);
+            boolean outputChanger = Boolean.valueOf(arguments);
             this.echoMethod(callbackContext, outputChanger);
         }
 
