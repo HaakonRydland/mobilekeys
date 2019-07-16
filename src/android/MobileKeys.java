@@ -45,10 +45,4 @@ public class MobileKeys extends CordovaPlugin {
         }
         callbackContext.error("That did not go as planned");
     }
-
-    private void privateEchoMethod(String message, CallbackContext callbackContext) {
-        MobileKeysImplementation mobileKey2 = new MobileKeysImplementation();
-        CallbackContext cb = mobileKey2.echoMethod(String message, CallbackContext callbackContext);
-        callbackContext = cb;
-    }
 }
